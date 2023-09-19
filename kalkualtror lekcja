@@ -1,0 +1,68 @@
+
+
+#include <iostream>
+
+int main()
+{
+    char  liczba;
+
+    int a, b;
+
+   
+
+    while (std::cin >> liczba >> a >> b)
+    {
+
+        switch (liczba)
+        {
+        case '+':
+            std::cout << a + b << std::endl;
+            break;
+        case '-':
+            std::cout << a - b << std::endl;
+            break;
+        case '*':
+            if (b != 0)
+            {
+                std::cout << a * b << std::endl;
+            }
+            else
+            {
+                std::cerr << "Blad danych. Mnozenie przez 0";
+                continue;
+            }
+            break;
+        case '/':
+            if (b != 0)
+            {
+                std::cout << a / b << std::endl;
+            }
+            else
+            {
+                std::cerr << "Blad danych. Dzielenie przez 0";
+                continue;
+            }
+
+            break;
+        case '%':
+            if (b != 0)
+            {
+                std::cout << a % b << std::endl;
+                
+            }
+            else
+            {
+                std::cerr << "Blad danych. Dzielenie przez 0";
+                continue;
+            }
+            break;
+        default:
+            std::cout << "Nieznane dzialanie." << std::endl;
+            continue;
+
+
+        }
+    }
+
+}
+
